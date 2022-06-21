@@ -38,7 +38,7 @@ By Bayes' theorem,
 $$
 \begin{align*}
 P\left(z_k^{(i)} = 1 \mid x^{(i)}, \pi, \mathbf p\right) &= \frac{P\left(x^{(i)} \mid z_k^{(i)} = 1, \pi, \mathbf p\right) P(z_k^{(i)} = 1 \mid \pi, \mathbf p)}{P\left(x^{(i)} \mid \pi, \mathbf p\right)}\\
-&= \frac{\pi_k P\left(x^{(i)} \mid p^{(k)}\right)}{P\left(x^{(i)} \mid \pi, \mathbf p\right)}
+&= \frac{P\left(x^{(i)} \mid p^{(k)}\right)\pi_k}{P\left(x^{(i)} \mid \pi, \mathbf p\right)}
 \end{align*}.
 $$
 All of these are answers we already have.  Plugging those in, we get
@@ -53,5 +53,5 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
-We need to compute
-$$\sum_{i=1$$
+
+$$\sum \log P(Z, X \mid \tilde{\mathbf p}, \tilde \pi)$$
