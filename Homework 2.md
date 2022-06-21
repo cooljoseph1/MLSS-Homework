@@ -18,7 +18,8 @@ For the second question, the indicator variable tells us that the distribution w
 $$p = \sum_{k=1}^K z^{(i)}_k p^{(k)} = \langle z^{(i)}, \mathbf p\rangle.$$
 So, the probability $x^{(i)}$ is selected is
 $$P\left(x^{(i)} \mid \langle z^{(i)}, \mathbf p\rangle\right)$$
-Note that $\pi$ isn't actually a factor.
+Note that $\pi$ isn't actually a factor.  Also:  This can be written another way as
+$$\prod_{k = 1}^K\left(\prod_{d=1}^D p_d^{x^{(i)}_d}(1 - p_d)^{1 - x^{(i)}_d}\right)^{z_k}.$$
 
 ### 2
 By Bayes' law (and assuming independence of the $x^{(i)}$),
@@ -53,8 +54,9 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
-We can simplify the given mess of an expected value into
-$$E\left[\right]$$
-
-
-$$\sum \log P(Z, X \mid \tilde{\mathbf p}, \tilde \pi)$$
+For the second part, let $A_k$ be the event that $p = p^{(k)}$.
+$$\begin{align*}
+\log P(X, Z \mid \pi, \mathbf p) &= \left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p)\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \pi )\right).\\
+&= \sum_{i = 1}^n \log P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p) + \log P(z^{(i)} \mid \pi)\\
+&= \sum_{i=1}^n \left(\sum_{k = 1}^K\right)
+\end{align*}$$
