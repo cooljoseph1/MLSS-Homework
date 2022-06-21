@@ -71,10 +71,12 @@ Taking the conditional expectation of this gives the desired result (since $E(z_
 
 ## 1.3
 ### 1
-Notice that
+
+
 The partial derivative with respect to $\tilde p_d^{(k)}$ of the E step is
 $$\sum_{i = 1}^N \eta(z_k^{(i)}) \left(\frac{x_d^{(i)}}{\tilde p_d^{(k)}} - \frac{1 - x_d^{(i)}}{1 - \tilde p_d^{(k)}}\right).$$
-This is equal to $0$ precisely when
+To find the maximum, we want this to equal zero.  Multiply everything by $\tilde p_d^{(k)}(1 - \tilde p_d^{(k)})$ and collect terms to get that
+$$\sum_{i = 1}^N \eta(z_k^{(i)}) x_d^{(i)}(1 + \tilde p_d^{(k)}) - 1 - x_d^{(i)} = .$$
 
 ### 2
 
