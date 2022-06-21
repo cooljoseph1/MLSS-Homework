@@ -14,11 +14,13 @@ $$
 P(z^{(i)} \mid \pi) &= \sum_{k=1}^K \pi(k) z^{(i)}_k.
 \end{align*}
 $$
+Edit:  This can also be written as
+$$\prod_{k = 1}^K \pi(k)^{z^{(i)}_k}.$$
 For the second question, the indicator variable tells us that the distribution we are drawing from is
 $$p = \sum_{k=1}^K z^{(i)}_k p^{(k)} = \langle z^{(i)}, \mathbf p\rangle.$$
 So, the probability $x^{(i)}$ is selected is
 $$P\left(x^{(i)} \mid \langle z^{(i)}, \mathbf p\rangle\right)$$
-Note that $\pi$ isn't actually a factor.  Also:  This can be written another way as
+Note that $\pi$ isn't actually a factor.  Edit:  This can be written another way as
 $$\prod_{k = 1}^K\left(\prod_{d=1}^D p_d^{x^{(i)}_d}(1 - p_d)^{1 - x^{(i)}_d}\right)^{z_k}.$$
 
 ### 2
@@ -54,14 +56,15 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
-For the second part, let $A_k$ be the event that $p = p^{(k)}$.  Then the conditional expectation is
-$$\begin{align*}
-E\left[\log P(X, Z \mid \tilde{\pi}, \tilde{\mathbf p})  \mid X, \mathbf p, \pi\right] &= \sum_{k = 1}^K E\left[\log P(X, Z \mid \tilde{\pi}, \tilde{\mathbf p})  \mid A_k, X, \mathbf p, \pi\right]\cdot P(A_k \mid X, \mathbf p, \pi)\\
-&= \sum_{k = 1}^K
-\end{align*}$$
+For the second part, note that we have already calculated $P(X, Z \mid \tilde \pi, \tilde{\mathbf p})$, so we can just write down
+$$
+\begin{align*}
+\log P(X, Z \mid \tilde \pi, \tilde{\mathbf p}) &= \log \left(\left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \tilde \pi, \tilde{\mathbf p})\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \tilde \pi )\right)\right)\\
 
-$$\begin{align*}
-\log P(X, Z \mid \pi, \mathbf p) &= \left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p)\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \pi )\right).\\
-&= \sum_{i = 1}^n \log P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p) + \log P(z^{(i)} \mid \pi)\\
-&= \sum_{i=1}^n \left(\sum_{k = 1}^K\right)
-\end{align*}$$
+&= \sum_{i = 1}^n\log \left(\prod_{k = 1}^K\left(\prod_{d=1}^D \tilde p_d^{(k)})^{x^{(i)}_d}(1 - \tilde p_d^{(k)})^{1 - x^{(i)}_d}\right)^{z_k^{(i)}}\right)\\
+
+&\qquad\qquad+ \sum_{i = 1}^n \log \left(\prod_{k = 1}^K \tilde \pi(k)^{z^{(i)}_k}\right)\\
+
+&= \sum_{i=1}^n \sum_{k = 1}^K z_k^{(i)}\left[\log \tilde \pi_k + \sum_{d=1}^D x_d^{(i)} \log \tilde p_d^{(k)} + (1 - x_d^{(i)}) \log(1 - \tilde p_d^{(k)})\right]
+\end{align*}.$$
+Taking the expected value of this gives the desired result (since $E(z_i \mid X, \pi, \mathbf p) = \eta(z_k^{(i)})$ and the other values are constant).
