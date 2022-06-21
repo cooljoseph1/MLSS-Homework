@@ -54,7 +54,12 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
-For the second part, let $A_k$ be the event that $p = p^{(k)}$.
+For the second part, let $A_k$ be the event that $p = p^{(k)}$.  Then the conditional expectation is
+$$\begin{align*}
+E\left[\log P(X, Z \mid \tilde{\pi}, \tilde{\mathbf p})  \mid X, \mathbf p, \pi\right] &= \sum_{k = 1}^K E\left[\log P(X, Z \mid \tilde{\pi}, \tilde{\mathbf p})  \mid A_k, X, \mathbf p, \pi\right]\cdot P(A_k \mid X, \mathbf p, \pi)\\
+&= \sum_{k = 1}^K
+\end{align*}$$
+
 $$\begin{align*}
 \log P(X, Z \mid \pi, \mathbf p) &= \left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p)\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \pi )\right).\\
 &= \sum_{i = 1}^n \log P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p) + \log P(z^{(i)} \mid \pi)\\
