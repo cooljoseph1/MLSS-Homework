@@ -76,7 +76,17 @@ Taking the conditional expectation of this gives the desired result (since $E(z_
 The partial derivative with respect to $\tilde p_d^{(k)}$ of the E step is
 $$\sum_{i = 1}^N \eta(z_k^{(i)}) \left(\frac{x_d^{(i)}}{\tilde p_d^{(k)}} - \frac{1 - x_d^{(i)}}{1 - \tilde p_d^{(k)}}\right).$$
 To find the maximum, we want this to equal zero.  Multiply everything by $\tilde p_d^{(k)}(1 - \tilde p_d^{(k)})$ and collect terms to get that
-$$\sum_{i = 1}^N \eta(z_k^{(i)}) x_d^{(i)}(1 + \tilde p_d^{(k)}) - 1 - x_d^{(i)} = .$$
+$$\sum_{i = 1}^N \eta(z_k^{(i)}) (x_d^{(i)} - \tilde p_d^{(k)}) = 0.$$
+Solving for $\tilde p_d^{(k)}$, we get that
+$$\tilde p_d^{(k)} = \frac{\sum_{i = 1}^N \eta(z_k^{(i)}) x_d^{(i)}}{N_k},$$
+as desired.
 
 ### 2
+We want to maximize
+$$\sum_{i = 1}^N \sum_{k = 1}^K \eta(z_k^{(i)}) \tilde\pi_k = \sum_{k = 1}^K N_k \tilde \pi_k.$$
+subject to $\sum_{k'} \tilde \pi_{k'} = 1$.  Using Lagrange multipliers, the above is maximized when
+$$\langle N_1, N_2, \dots, N_K \rangle = \lambda \langle 1, 1, \dots, 1\rangle$$
+for some constant $\lambda$.  This allows us to easily see that
+$$\tilde \pi_k = \frac{N_k}{\sum_{k'} N_k},$$
+as desired.
 
