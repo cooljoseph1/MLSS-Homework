@@ -1,6 +1,6 @@
 ## 1.1
 ### 1
-$$P(x \mid p) = \prod_{d=1}^D p_d^x(1 - p_d)^{1 - x}.$$
+$$P(x \mid p) = \prod_{d=1}^D p_d^{x_d}(1 - p_d)^{1 - x_d}.$$
 ### 2
 $$P(x^{(i)} \mid \mathbf p, \pi) = \sum_{k=1}^K P(x^{(i)} \mid p^{(k)})\pi(k).$$
 ### 3
@@ -25,13 +25,32 @@ By Bayes' law (and assuming independence of the $x^{(i)}$),
 $$\begin{align*}
 P(X, Z \mid \pi, \mathbf p) &= P(X \mid Z, \pi, \mathbf p)P(Z \mid \pi, \mathbf p)\\
 &= P(X \mid Z, \pi, \mathbf p)P(Z \mid \pi)\\
-&= \left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \pi )\right).
+&= \left(\prod_{i=1}^n P(x^{(i)} \mid z^{(i)}, \pi, \mathbf p)\right)\left(\prod_{i=1}^n P(z^{(i)} \mid \pi )\right).
 \end{align*}$$
 ### 3
-Use the definition of conditional expectation and Bayes' theorem:
+Since $z^{(i)}$ is an indicator variable,
 $$
 \begin{align*}
-\ &=\\
-a
+\eta\left(z^{(i)}_k\right) &= E\left[z_k^{(i)} \mid x^{(i)}, \pi, \mathbf p\right] = P\left(z_k^{(i)} = 1 \mid x^{(i)}, \pi, \mathbf p\right).
 \end{align*}
 $$
+By Bayes' theorem,
+$$
+\begin{align*}
+P\left(z_k^{(i)} = 1 \mid x^{(i)}, \pi, \mathbf p\right) &= \frac{P\left(x^{(i)} \mid z_k^{(i)} = 1, \pi, \mathbf p\right) P(z_k^{(i)} = 1 \mid \pi, \mathbf p)}{P\left(x^{(i)} \mid \pi, \mathbf p\right)}\\
+&= \frac{\pi_k P\left(x^{(i)} \mid p^{(k)}\right)}{P\left(x^{(i)} \mid \pi, \mathbf p\right)}
+\end{align*}.
+$$
+All of these are answers we already have.  Plugging those in, we get
+$$\eta\left(z^{(i)}_k\right) = \frac{
+	\pi_k \prod_{d=1}^D
+	\left(p^{(k)}_d\right)^{x^{(i)}_d}
+	\left(1 - p^{(k)}_d\right)^{1 - x^{(i)}_d}
+}{\sum_{j=1}^n
+	\pi_j \prod_{d=1}^D
+	\left(p^{(j)}_d\right)^{x^{(i)}_d}
+	\left(1 - p^{(j)}_d\right)^{1 - x^{(i)}_d}
+},$$
+as desired.
+
+Now, using our earlier 
