@@ -53,4 +53,5 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
-Now, using our earlier 
+We need to compute
+$$\sum_{i=1$$
