@@ -67,4 +67,14 @@ $$
 
 &= \sum_{i=1}^n \sum_{k = 1}^K z_k^{(i)}\left[\log \tilde \pi_k + \sum_{d=1}^D x_d^{(i)} \log \tilde p_d^{(k)} + (1 - x_d^{(i)}) \log(1 - \tilde p_d^{(k)})\right]
 \end{align*}.$$
-Taking the expected value of this gives the desired result (since $E(z_i \mid X, \pi, \mathbf p) = \eta(z_k^{(i)})$ and the other values are constant).
+Taking the conditional expectation of this gives the desired result (since $E(z_i \mid X, \pi, \mathbf p) = \eta(z_k^{(i)})$ and the other values are constant).
+
+## 1.3
+### 1
+Notice that
+The partial derivative with respect to $\tilde p_d^{(k)}$ of the E step is
+$$\sum_{i = 1}^N \eta(z_k^{(i)}) \left(\frac{x_d^{(i)}}{\tilde p_d^{(k)}} - \frac{1 - x_d^{(i)}}{1 - \tilde p_d^{(k)}}\right).$$
+This is equal to $0$ precisely when
+
+### 2
+
