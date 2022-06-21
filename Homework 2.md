@@ -53,5 +53,8 @@ $$\eta\left(z^{(i)}_k\right) = \frac{
 },$$
 as desired.
 
+We can simplify the given mess of an expected value into
+$$E\left[\right]$$
+
 
 $$\sum \log P(Z, X \mid \tilde{\mathbf p}, \tilde \pi)$$
