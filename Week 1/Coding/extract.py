@@ -1,2 +1,6 @@
-from keras.datasets import mnist
-(train_X, train_y), (test_X, test_y) = mnist.load_data()
+from scipy.io import loadmat
+import numpy
+
+data = loadmat("mnist-original.mat")
+labels = data["label"].transpose().flatten().astype(numpy.uint8)
+numpy.save("mnist_labels.npy", labels)
