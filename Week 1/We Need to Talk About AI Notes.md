@@ -22,8 +22,24 @@ I mean, that's kind of ambiguous without a clear definition of consciousness.  (
 ### Thinking and feeling will come together.
 What do they mean by feeling?  Emotions?  I think this is unlikely.  Feelings are our way of approximating our utility function, but there are much more efficient ways to do so.
 
+### You can look at AIs and see what makes them tick.
+Um... No.  That's the whole difficulty with the AI alignment.
 
+### AI is just finding a new way to do slavery.
+Well, kind of, but not really.  It's much broader than that, and doesn't carry the main downside of slavery:  that the slaves don't like being enslaved.
 
+### We're co-evovling with technology.
+No, we aren't.  Evolution takes many generations.  We are just learning to use more technology.
+
+### It's always going to be cheaper to get a product out there than a *safe* product out there.
+Yeah, duh.
+
+### The first person to develop strong AI  will rule the world.
+Yes!  Why are governments not spending WAY more on AI research??
+
+### There is an "event horizon" of intelligence.
+I.e. the singularity can/will occur.
+I'm less certain on this, but think it might be true.
 
 ## Assertion significantly less true in 2020 than in 2022
 ### Our present AI systems are very *very* narrow at what they do.
@@ -31,7 +47,17 @@ This is false.  Look at Gato, for example.
 
 ## Discussion Questions
 -   Find one claim made in the movie, and try to investigate it further. What did you find?
+I'm investigating how much governments are spending on AI research, and where that money is going.
+
+
 -   What did you find most compelling about the movie?
+It wasn't very compelling at all.  There were way too many dark side tactics.  Most compelling was probably the Space Odyssey quotes:  They were fun to watch but also showed how a slightly mis-aligned AI can create disastrous outcomes, a convincing argument for the dangers of AI.
+
 -   What did you disagree with the most in the movie?
--   What point do you wish had been made?   
+It's a toss-up between "AIs fighting in wars instead of humans is bad" and "AI slavery is bad."
+
+-   What point do you wish had been made?
+AI can do a tremendous amount of good as well.
+
 -   Which of the possible threats from AI that was mentioned seems most important to you? What might convince you to change your mind?
+The most important threat mentioned to me was that there isn't much reason for AI
