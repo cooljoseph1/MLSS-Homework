@@ -51,6 +51,7 @@ Claim:  Whoever gets first to market with an AI will rule the world.
 Question this makes me ask:  Why aren't governments funding AI like nuclear weapons?  Or ar they?
 I'm investigating **how much governments are spending on AI research, and where that money is going**.
 
+Okay--The goverment spends about 37 billion on all science research.  It also spent ~1.7 billion in 2020 on AI research.  This jumped up to 6 billion in 2021, and is probably even higher now.  So, yes, they actually are funding AI research like nuclear weapons, and continuing to spend more on it.  Most of the money is going into millitary applications.
 
 -   What did you find most compelling about the movie?
 It wasn't very compelling at all.  There were way too many dark side tactics.  Most compelling was probably the Space Odyssey quotes:  They were fun to watch but also showed how a slightly mis-aligned AI can create disastrous outcomes, a convincing argument for the dangers of AI.
