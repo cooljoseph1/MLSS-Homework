@@ -47,7 +47,9 @@ This is false.  Look at Gato, for example.
 
 ## Discussion Questions
 -   Find one claim made in the movie, and try to investigate it further. What did you find?
-I'm investigating how much governments are spending on AI research, and where that money is going.
+Claim:  Whoever gets first to market with an AI will rule the world.
+Question this makes me ask:  Why aren't governments funding AI like nuclear weapons?  Or ar they?
+I'm investigating **how much governments are spending on AI research, and where that money is going**.
 
 
 -   What did you find most compelling about the movie?
@@ -60,4 +62,4 @@ It's a toss-up between "AIs fighting in wars instead of humans is bad" and "AI s
 AI can do a tremendous amount of good as well.
 
 -   Which of the possible threats from AI that was mentioned seems most important to you? What might convince you to change your mind?
-The most important threat mentioned to me was that there isn't much reason for AI
+The most important threat mentioned to me was that small mis-alignments in AIs can lead to disastrous outcomes.  What might convince me to change my mind is evidence that AIs learn what human values are through "osmosis" on their training data.  E.g., if a study came out that most LLMs pass >90% of ethics questions posed to them, I'd feel much more comfortable about this problem, since then we can hardcode in the AI asking itself whether what it's doing is ethical before taking actions.
