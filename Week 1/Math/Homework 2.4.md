@@ -2,7 +2,7 @@
 ### 1
 The minimum occurs at $\lambda = 0$, $\lambda = +\infty$, or when
 $$\frac{d}{d\lambda} \left(\lambda + \frac{x^2}{\lambda + d}\right) = 1 - \frac{x^2}{(\lambda + d)^2} = 0.$$
-The latter occurs only if $|x| \ge d$, when $\lambda = |x| - d$.  Testing out these three values for $\lambda$, the minimum is $x^2 / d$ if $|x| > d$ and $2|x| - d$ otherwise.
+The latter occurs only if $|x| \ge d$, when $\lambda = |x| - d$.  Testing out these three values for $\lambda$, the minimum is $x^2 / d$ if $|x| > d$ and $2|x| - d$ otherwise, with the minimum occurring at $\lambda^* = \max(0, |x| - d)$.
 
 ### 2
 Take a second derivative to get
@@ -49,7 +49,8 @@ This is how we defined $x^*_i$ earlier, so this is always satisfied at $x^*$.
 $$\sum_{i = 1}^N a_ix_i^* = 1.$$
 and
 $$(x_i^*)^2 \le 1$$
-for all $i$.
+for all $i$.  Equivalently,
+$$|\lambda a_i + r_i| \le |\mu_i + d_i|.$$
 
 **Dual feasibility:**
 This is the constraint $\mu_i \ge 0$ for all $i$.
@@ -61,8 +62,21 @@ Slater's condition and part 1 tells us this characterizes the optimal solution w
 
 ### 4
 It doesn't matter what order we do the minimization, so the dual problem is the same as
-$$\min_{\lambda} \min_{\mu} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right]$$
+$$\min_{\lambda} \min_{\mu} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right] = \min_\lambda \lambda + \frac12 \sum_{i = 1}^N B(r_i + \lambda a_i, d_i),$$
+since that's how $B(r_i + \lambda a_i, d_i)$ is defined.  Of course, we then have to make sure our constraints our satisfied.  Since the $\mu_i$ is optimized at
+$$\mu_i^* = \max(0, |r_i + \lambda a_i| - d_i),$$
+this is what we should plug in to calculate $x_i^*$ and make sure the constraints work.
 
-Note that $\lambda$ doesn't show up in the KKT conditions (except the stationary condition, which is always satisfied).  This means that we can set it to anything!  Using the definition of
-$$B(r_i + \mu$$
-We can further reduce the dual problem to the one dimensional con
+### 5
+Note that
+
+### 6
+To recover the primal solution $x$, use the fact that
+$$\mu_i = \max(0, |r_i + \lambda a_i| - d_i)$$
+to compute
+$$x_i = \frac{\lambda a_i + r_i}{\mu_i + d_i}.$$
+This can be combined all together to get
+$$x_i = \begin{cases}
+\frac{\lambda a_i + r_i}{d_i} & \text{if } |r_i + \lambda a_i| \le d_i\\
+\frac{\lambda a_i + r_i}{|\lambda a_i + r_i|} & \text{if } |r_i + \lambda a_i| > d_i.
+\end{cases}$$
