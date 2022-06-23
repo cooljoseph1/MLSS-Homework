@@ -26,4 +26,5 @@ Suppose that there is a strictly feasible solution for which $\|a\|_1 \le 1.$  T
 $$|a^Tx| = \left|\sum a_ix_i\right| \le \sum |a_i||x_i| < \sum|a_i| = 1,$$
 where the last inequality comes from the fact that $|x_i| < 1$ for all $i$.  This contradicts the fact that $a^Tx = 1$, though.  So, all strictly feasible solutions must have $\|a\|_1 > 1$.
 ### 2
-
+The dual problem is to minimize
+$$\sum_{i = 1}^N \left[\frac12 \cdot \frac{(a_i\lambda_i - r_i)^2}{d_i} + \sum_{i = 1}^N \frac{a_i\lambda_ir_i}{d_i} + \frac{(a_i\lambda_i)^2}{d_i}\right]$$
