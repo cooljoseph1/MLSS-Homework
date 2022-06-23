@@ -30,17 +30,39 @@ where the last inequality comes from the fact that $|x_i| < 1$ for all $i$.  Thi
 The Lagrangian is
 $$L(x, \mu, \lambda) = \lambda - \sum_{i = 1}^N \left[\frac12d_ix_i^2 + r_ix_i + \frac12\mu_i(x_i^2 - 1) + \lambda a_ix_i\right].$$
 We have the constraints $\mu_i \ge 0$ for all $i$.
-We want to minimize this Lagrangian$ for all $i$.  Note that
+We want to minimize this Lagrangian for all $i$.  Note that
 $$\frac{\partial}{\partial x_i} L(x, \mu, \lambda) = -(d_ix_i + r_i + \mu_i x_i + \lambda a_i).$$
 This is equal to zero at
 $$x_i^* = -\frac{\lambda a_i + r_i}{\mu_i + d_i}$$
 (where the $^*$ is there to remind us that this is where $x_i$ is optimized).  Plugging this into the Lagrangian (and simplifying a lot) gives us the dual problem
-$$\max_{\mu, \lambda} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right]$$
+$$\min_{\mu, \lambda} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right]$$
 subject to $\mu_i \ge 0$ for all $i$.
 
 ### 3
-For a point $x^*$ to be theWe need $\mu_i \ge 0$ (for dual feasibility)The point $x^*$ was chosen For the point $x^*$ to satisfy the KKT conditions, we must have
-$$$$
+For the tuple $(x^*, \mu, \lambda)$ to satisfy the KKT conditions, we need the following:
+**Stationary:**
+For all $i$, 
+$$d_ix_i + r_i + \lambda a_i+ \mu_i x_i = 0$$
+This is how we defined $x^*_i$ earlier, so this is always satisfied at $x^*$.
 
+**Primal feasibility:**
+$$\sum_{i = 1}^N a_ix_i^* = 1.$$
+and
+$$(x_i^*)^2 \le 1$$
+for all $i$.
+
+**Dual feasibility:**
+This is the constraint $\mu_i \ge 0$ for all $i$.
+
+**Complementary slackness:**
+$$\sum_{i = 1}^N \mu_i ((x_i^*)^2 - 1) = 0.$$
 
 Slater's condition and part 1 tells us this characterizes the optimal solution when $\|a\|_1 > 1$.
+
+### 4
+It doesn't matter what order we do the minimization, so the dual problem is the same as
+$$\min_{\lambda} \min_{\mu} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right]$$
+
+Note that $\lambda$ doesn't show up in the KKT conditions (except the stationary condition, which is always satisfied).  This means that we can set it to anything!  Using the definition of
+$$B(r_i + \mu$$
+We can further reduce the dual problem to the one dimensional con
