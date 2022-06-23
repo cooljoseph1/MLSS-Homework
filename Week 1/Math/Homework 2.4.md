@@ -65,10 +65,19 @@ It doesn't matter what order we do the minimization, so the dual problem is the 
 $$\min_{\lambda} \min_{\mu} \lambda + \frac12\sum_{i = 1}^N\left[\mu_i + \frac{(\lambda  a_i + r_i)^2}{\mu_i + d_i} \right] = \min_\lambda \lambda + \frac12 \sum_{i = 1}^N B(r_i + \lambda a_i, d_i),$$
 since that's how $B(r_i + \lambda a_i, d_i)$ is defined.  Of course, we then have to make sure our constraints our satisfied.  Since the $\mu_i$ is optimized at
 $$\mu_i^* = \max(0, |r_i + \lambda a_i| - d_i),$$
-this is what we should plug in to calculate $x_i^*$ and make sure the constraints work.
+this is what we should plug in to calculate $x_i^*$ and make sure the constraints work.  In fact, this value of $\mu_i^*$ guarantees that $|x_i^*| \le 1$, so we have one fewer constraint to worry about.
 
 ### 5
-Note that
+Define $A(\lambda) = 1 - \sum a_i x_i^*$, where $x_i^*$ is the optimal value for $x_i$ for the given lambda.  We want to find
+$$\min_\lambda \lambda + \frac12 \sum_{i = 1}^N B(r_i + \lambda a_i, d_i)$$
+given that $A(\lambda) = 0$.
+
+There are $2N$ critical points for $\lambda$ for which $x_i^*$ switches from being $\pm 1$ to being in the interval $(-1, 1)$.  Name these critical points $\lambda_1, \lambda_2, \dots, \lambda_{2N}$. $A(\lambda)$ is linear between any pair of these critical points, and constant to the left and right of the extremes.  This means that the following algorithm is guaranteed to find all points for which $A(\lambda) = 0$.
+
+1. Compute the critical points $\lambda_1, \lambda_2, \dots, \lambda_{2N}$.  These occur when $|r_i + \lambda a_i| = d_i$.  This can be done in $O(N)$ time.  While you do so, record which $x_i^*$ each critical point corresponds to.  This allows you to compute the change of the slope of $A(\lambda)$ at each critical point in $O(1)$ time.
+2. Compute $A(\lambda_i) = 1 - \sum a_i x_i^*$ at each of the critical points.  This can be done in $O(N)$ time by keeping track of the slope of $A(\lambda)$ between critical points.
+3. Loop through the critical points, recording which pairs of consecutive points $(A(\lambda_i), A(\lambda_{i+1}))$  have opposite signs.  This can be done in $O(N)$ time.
+4. Between each of these pairs of points, calculate the value of $\lambda$ makes $A(\lambda) = 0$.  This is 
 
 ### 6
 To recover the primal solution $x$, use the fact that
