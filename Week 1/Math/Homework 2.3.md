@@ -31,7 +31,29 @@ $$N\lambda \tilde K \alpha = \tilde K(N \lambda \alpha) = \tilde K^2 \alpha,$$
 as desired.
 
 ### 5
-For ease of typing this up, let $\mu = \overline{\phi(x)}$.  Then
-$$\tilde K_{i, j} = \left\langle \phi(x_i) - \mu, \phi(x_j) - \mu \right\rangle = \langle \phi(x_i), \phi(x_j) \rangle - \langle \phi(x_i), \mu \rangle - \langle \mu, \phi(x_j) \rangle + \langle \mu, \mu\rangle.$$
-On the other hand the component of $(I - ee^T)K(I - ee^T)$ in the $i$th row and $j$th column is
-$$\sum_{$$
+First off, $ee^T$ is the $N \times N$ matrix with every entry equal to $1 / N$.
+
+For ease of typing this up, let $\mu = \overline{\phi(x)}$. 
+Note that the component of $ee^TK$ in the $i$th row and $j$th column is
+$$\frac{1}{N}\sum_{k = 1}^N \langle\phi(x_k), \phi(x_j)\rangle = \left\langle \frac{1}{N}\sum_{k = 1}^N \phi(x_k), \phi(x_j) \right\rangle = \langle \mu, \phi(x_j) \rangle.$$
+
+Note that the component of $Kee^T$ in the $i$th row and $j$th column is
+$$\langle \phi(x_j), \mu \rangle.$$
+
+Finally, the component of $ee^TKee^T$ in the $i$th row and $j$th column is
+$$\langle \mu, \mu \rangle.$$
+
+Thus, the component in the $i,j$th location of
+$$(I - ee^T)K(I - ee^T) = K - ee^T K - Kee^T + ee^TKee^T.$$
+equals
+$$\langle \phi(x_i), \phi(x_j) \rangle - \langle \phi(x_i), \mu \rangle - \langle \mu, \phi(x_j) \rangle + \langle \mu, \mu\rangle = \left\langle \phi(x_i) - \mu, \phi(x_j) - \mu \right\rangle,$$
+which is exactly the $i,j$th entry of $\tilde K_{i, j}$, as desired.
+
+### 6
+Note that
+$$\langle v, v \rangle = \alpha^T \tilde K \alpha.$$
+the factor we want is the square root of this.
+
+### 7
+Its position in the normalized space is
+$$x = \sum_{v} \frac{\langle x, v \rangle v}{\langle v, v \rangle}$$
