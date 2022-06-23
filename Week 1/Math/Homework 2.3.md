@@ -55,5 +55,11 @@ $$\langle v, v \rangle = \alpha^T \tilde K \alpha.$$
 the factor we want is the square root of this.
 
 ### 7
-Its position in the normalized space is
-$$x = \sum_{v} \frac{\langle x, v \rangle v}{\langle v, v \rangle}$$
+Its position in the normalized new space is
+$$
+\begin{align*}
+\phi(x) &= \sum_{v} \frac{\langle \phi(x), v \rangle v}{\langle v, v \rangle}\\
+&= \sum_{(\alpha, v)} \frac{\left(\sum_{i = 1}^N \alpha_i\left\langle \phi(x), \phi(x_i) - \overline{\phi(x)}\right\rangle\right)}{\alpha^{T}\tilde K \alpha} v\\
+&= \sum_{(\alpha, v)} \frac{\left(\sum_{i = 1}^N \alpha_ik\left(x, \phi(x_i) - \overline{\phi(x)}\right)\right)}{\alpha^{T}\tilde K \alpha} v
+\end{align*}.$$
+So, we only need to know $\alpha$, $v$, and $k$ to compute what $x$ is in the new space.
