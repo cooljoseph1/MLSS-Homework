@@ -1,4 +1,4 @@
-## 1.1
+## 2.1.1
 ### 1
 $$P(x \mid p) = \prod_{d=1}^D p_d^{x_d}(1 - p_d)^{1 - x_d}.$$
 ### 2
@@ -6,7 +6,7 @@ $$P(x^{(i)} \mid \mathbf p, \pi) = \sum_{k=1}^K P(x^{(i)} \mid p^{(k)})\pi(k).$$
 ### 3
 The log likelihood is
 $$\sum_{i=1}^n \log P(x^{(i)} \mid \mathbf p, \pi).$$
-## 1.2
+## 2.1.2
 ### 1
 The probability that $p^{(k)}$ was chosen for $x^{(i)}$ to be drawn from is $\pi(k)$.  So,
 $$
@@ -69,7 +69,7 @@ $$
 \end{align*}.$$
 Taking the conditional expectation of this gives the desired result (since $E(z_i \mid X, \pi, \mathbf p) = \eta(z_k^{(i)})$ and the other values are constant).
 
-## 1.3
+## 2.1.3
 ### 1
 
 
