@@ -72,12 +72,17 @@ Define $A(\lambda) = 1 - \sum a_i x_i^*$, where $x_i^*$ is the optimal value for
 $$\min_\lambda \lambda + \frac12 \sum_{i = 1}^N B(r_i + \lambda a_i, d_i)$$
 given that $A(\lambda) = 0$.
 
-There are $2N$ critical points for $\lambda$ for which $x_i^*$ switches from being $\pm 1$ to being in the interval $(-1, 1)$.  Name these critical points $\lambda_1, \lambda_2, \dots, \lambda_{2N}$. $A(\lambda)$ is linear between any pair of these critical points, and constant to the left and right of the extremes.  This means that the following algorithm is guaranteed to find all points for which $A(\lambda) = 0$.
-
+There are $2N$ critical points for $\lambda$ for which $x_i^*$ switches from being $\pm 1$ to being in the interval $(-1, 1)$.  $A(\lambda)$ is linear between any pair of these critical points, which makes it easy to compute the values of $\lambda$ for which $A(\lambda) = 0$ by computing $A(\lambda)$ at the critical points.  Using this idea, the following algorithm computes the desired minimum in $O(N \log N)$ time:
 1. Compute the critical points $\lambda_1, \lambda_2, \dots, \lambda_{2N}$.  These occur when $|r_i + \lambda a_i| = d_i$.  This can be done in $O(N)$ time.  While you do so, record which $x_i^*$ each critical point corresponds to.  This allows you to compute the change of the slope of $A(\lambda)$ at each critical point in $O(1)$ time.
-2. Compute $A(\lambda_i) = 1 - \sum a_i x_i^*$ at each of the critical points.  This can be done in $O(N)$ time by keeping track of the slope of $A(\lambda)$ between critical points.
-3. Loop through the critical points, recording which pairs of consecutive points $(A(\lambda_i), A(\lambda_{i+1}))$  have opposite signs.  This can be done in $O(N)$ time.
-4. Between each of these pairs of points, calculate the value of $\lambda$ makes $A(\lambda) = 0$.  This is 
+2. Sort your critical points so that $\lambda_1 \le \lambda_2 \le \cdots \le \lambda_{2N}$.  This takes $O(N \log N)$ time.
+3. Compute $A(\lambda_i) = 1 - \sum a_i x_i^*$ at each of the critical points.  This can be done in $O(N)$ time by keeping track of the slope of $A(\lambda)$ between critical points.
+4. Loop through the critical points, recording which pairs of consecutive points $(A(\lambda_i), A(\lambda_{i+1}))$  have opposite signs.  This can be done in $O(N)$ time.
+5. Between each of these pairs of points, calculate the value of $\lambda$ makes $A(\lambda) = 0$.  This can be done in $O(1)$ time per pair.
+6. Use a binary search to find which of the above values of $\lambda$ minimizes
+   $$f(\lambda) = \lambda + \frac12 \sum_{i = 1}^N B(r_i + \lambda a_i, d_i).$$
+   (We can use a binary search because this is a convex function.)  This takes $O(N \log N)$ time since it takes $O(N)$ time to calculate $f(\lambda)$ for each $\lambda$, and we need to calculate $f(\lambda)$ at most $\log_2(N)$ times.
+
+In total, the algorithm takes $O(N \log N)$ time.
 
 ### 6
 To recover the primal solution $x$, use the fact that
