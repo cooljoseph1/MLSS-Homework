@@ -22,10 +22,22 @@ $$\mathrm{argmin}_w\sum_{i} \rho_t(y_i - w) = y_\tau.$$
 It's half the L-1 loss.  It's also half the absolute value.
 
 ### 3
-Like above, the function to be minimized is convex, so any local minimum is a global minimum.  Split the sum into the cases $y_i < x_i^{T}\beta$ and $y_i \ge x_i^T\beta$ and take a derivative to  get
-
-$$\left(\sum_{y_i < x_i^T \beta}(\tau - 1) \right) + \left(\sum_{y_i \geq x_i^T \beta}\tau \right) = 0.$$
+Setting
+$$u_i = \max(0, y_i - x_i^T\beta)\quad \text{and}\quad v_i = \max(0, x_i^T\beta - y_i)$$
+shows that the minimum of
+$$f(u, v) = u^T1\tau + v^T1(1 - \tau)$$
+subject to
+$$X^T\beta - y + u - v = 0$$
+is no greater than the minimum of $\sum_{i = 1}^N \rho_\tau(y_i - x_i^T\beta)$.  The other direction follows from the fact that the only way to diminish $f(u, v)$ is to decrease the value of either $u_i$ or $v_i$ in some coordinate $i$.  However, any decrease in $u_i$ must result in an identical decrease in $v_i$, but at least one of these is already $0$, so they can't be decreased any further.  
 
 ### 4
+The problem is equivalent to minimizing
+$$\begin{align*}
+L(\beta, u, v, \lambda, \mu, \nu) &= u^T1\tau + v^T1(1 - \tau) + \lambda^T(X^T\beta - y + u - v)\\
+&\qquad \qquad- \mu ^T u - \nu^Tv.
+\end{align*}$$
+Taking derivatives with respect to $u$ and $v$ 
+
+
 ### 5
 ### 6
