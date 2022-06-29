@@ -34,14 +34,21 @@ is no greater than the minimum of $\sum_{i = 1}^N \rho_\tau(y_i - x_i^T\beta)$. 
 The problem is equivalent to minimizing
 $$\begin{align*}
 L(\beta, u, v, \lambda, \mu, \nu) &= u^T1\tau + v^T1(1 - \tau) + \lambda^T(X^T\beta - y + u - v)\\
-&\qquad \qquad- \mu ^T u - \nu^Tv
+&\qquad \qquad + \mu ^T u + \nu^Tv
 \end{align*}$$
 subject to $\mu, \nu \ge 0$.
-Taking derivatives with respect to $u$ and $v$ gives
-$$\mu = 1\tau + \lambda \quad\text{and}\quad \nu = 1(1 - \tau) + \lambda.$$
+
+Taking a derivative with respect to $\beta$ tells us that $X\lambda = 0$.  I.e., $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to minimize
+$$L_2(u, v, \mu, \nu) = u^T1\tau + v^T1(1 - \tau) + \lambda^T(- y + u - v) + \mu ^T u + \nu^Tv.$$
+Taking derivatives with respect to $u$ and $v$ and setting them equal to 0 shows that the above is minimized when
+$$\mu = -1\tau - \lambda \quad\text{and}\quad \nu = -1(1 - \tau) + \lambda.$$
+The constraints $\mu \ge 0$ and $\nu \ge 0$ require that
+$$\lambda \leq -1\tau \quad\text{and}\quad \lambda \ge 1(1 - \tau).$$
 Plugging this in gives the equivalent minimization of
-$$\lambda^T(X^T \beta - y)$$
-subject to $\lambda \ge 1\max(-\tau, \tau - 1)$.
+$$L_3(\lambda) = \lambda^Ty$$
+subject to $1 - \tau x\lambda_i \ge 1\max(\tau, 1 - \tau)$. for all $i$, and $\lambda$ is in the null-space of $X$.  If we set
+$$z = \frac{\lambda - 1\tau}{1 - \tau},$$
+then 
 
 
 ### 5
