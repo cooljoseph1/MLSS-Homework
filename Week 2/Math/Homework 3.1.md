@@ -33,23 +33,33 @@ is no greater than the minimum of $\sum_{i = 1}^N \rho_\tau(y_i - x_i^T\beta)$. 
 ### 4
 The problem is equivalent to minimizing
 $$\begin{align*}
-L(\beta, u, v, \lambda, \mu, \nu) &= u^T1\tau + v^T1(1 - \tau) + \lambda^T(X^T\beta - y + u - v)\\
-&\qquad \qquad + \mu ^T u + \nu^Tv
+L(\beta, u, v, \lambda, \mu, \nu) = \max_{\lambda, \mu, \nu} \min_{\beta, u, v} &\quad u^T1\tau + v^T1(1 - \tau)\\
+&- \lambda^T(X^T\beta - y + u - v)\\
+&- \mu ^T u - \nu^Tv
 \end{align*}$$
 subject to $\mu, \nu \ge 0$.
 
-Taking a derivative with respect to $\beta$ tells us that $X\lambda = 0$.  I.e., $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to minimize
-$$L_2(u, v, \mu, \nu) = u^T1\tau + v^T1(1 - \tau) + \lambda^T(- y + u - v) + \mu ^T u + \nu^Tv.$$
-Taking derivatives with respect to $u$ and $v$ and setting them equal to 0 shows that the above is minimized when
-$$\mu = -1\tau - \lambda \quad\text{and}\quad \nu = -1(1 - \tau) + \lambda.$$
+Taking a derivative with respect to $\beta$ tells us this occurs when $X\lambda = 0$.  I.e., $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to find a saddle point of
+$$L_2(u, v, \mu, \nu) = u^T1\tau + v^T1(1 - \tau) - \lambda^T(- y + u - v) - \mu ^T u - \nu^Tv.$$
+Taking derivatives with respect to $u$ and $v$ and setting them equal to 0 shows that a saddle point occurs when
+$$\mu = 1\tau - \lambda \quad\text{and}\quad \nu = 1(1 - \tau) + \lambda.$$
 The constraints $\mu \ge 0$ and $\nu \ge 0$ require that
-$$\lambda \leq -1\tau \quad\text{and}\quad \lambda \ge 1(1 - \tau).$$
-Plugging this in gives the equivalent minimization of
-$$L_3(\lambda) = \lambda^Ty$$
-subject to $1 - \tau x\lambda_i \ge 1\max(\tau, 1 - \tau)$. for all $i$, and $\lambda$ is in the null-space of $X$.  If we set
-$$z = \frac{\lambda - 1\tau}{1 - \tau},$$
-then 
-
+$$\lambda \leq 1\tau \quad\text{and}\quad \lambda \ge 1(\tau - 1).$$
+Plugging this in gives the equivalent maximization of
+$$L_3(\lambda) = \lambda^T y$$
+subject to $\tau - 1 \leq \lambda_i \leq \tau$ for all $i$, and $\lambda$ is in the null-space of $X$.  Setting
+$$z = \lambda + 1(1 - \tau)$$
+gives the formulation
+$$\max_{z} z^T y, \quad\text{subject to}\quad Xz = (1 - \tau)X1, z \in [0, 1]^N,$$
+as desired.
 
 ### 5
+Using complementary slackness,
+$$\lambda_i(y_i - x_i^T \beta - u_i + v_i) = 0$$
+for all $i$.  Since $\mu_i = \tau - \lambda_i$ and $\nu_i = 1 - \tau + \lambda_i$, this can be simplified to
+$$\lambda_i(y_i - x_i^T\beta + 1 - 2\tau + 2\lambda_i) = 0.$$
+Replacing $\lambda_i = z_i + \tau - 1$ gives
+$$(z_i + \tau - 1)(y_i - x_i^{T}\beta + 2z_i - 1) = 0.$$
+Thus, if $z_i = 0$, $y_i - x_i^T\beta - 1 = 0 \Longrightarrow x
+
 ### 6
