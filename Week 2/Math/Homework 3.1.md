@@ -34,9 +34,14 @@ is no greater than the minimum of $\sum_{i = 1}^N \rho_\tau(y_i - x_i^T\beta)$. 
 The problem is equivalent to minimizing
 $$\begin{align*}
 L(\beta, u, v, \lambda, \mu, \nu) &= u^T1\tau + v^T1(1 - \tau) + \lambda^T(X^T\beta - y + u - v)\\
-&\qquad \qquad- \mu ^T u - \nu^Tv.
+&\qquad \qquad- \mu ^T u - \nu^Tv
 \end{align*}$$
-Taking derivatives with respect to $u$ and $v$ 
+subject to $\mu, \nu \ge 0$.
+Taking derivatives with respect to $u$ and $v$ gives
+$$\mu = 1\tau + \lambda \quad\text{and}\quad \nu = 1(1 - \tau) + \lambda.$$
+Plugging this in gives the equivalent minimization of
+$$\lambda^T(X^T \beta - y)$$
+subject to $\lambda \ge 1\max(-\tau, \tau - 1)$.
 
 
 ### 5
