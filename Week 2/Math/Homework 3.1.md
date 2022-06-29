@@ -60,6 +60,11 @@ for all $i$.  Since $\mu_i = \tau - \lambda_i$ and $\nu_i = 1 - \tau + \lambda_i
 $$\lambda_i(y_i - x_i^T\beta + 1 - 2\tau + 2\lambda_i) = 0.$$
 Replacing $\lambda_i = z_i + \tau - 1$ gives
 $$(z_i + \tau - 1)(y_i - x_i^{T}\beta + 2z_i - 1) = 0.$$
-Thus, if $z_i = 0$, $y_i - x_i^T\beta - 1 = 0 \Longrightarrow x
+Thus, if $z_i = 0$,
+$$y_i - x_i^T\beta - 1 = 0 \Longrightarrow y_i - x_i^T\beta = 1.$$
+If $z_i = 1$, then $y_i - x_i^T\beta = -1$.
+If $z_i \in (0, 1)$, then there are two cases to consider:
+- If $z_i = 1 - \tau$, then $y_i - x_i^T\beta$ can be anything.
+- Otherwise, $y_i - x_i^T\beta = 1 - 2z_i$.
 
 ### 6
