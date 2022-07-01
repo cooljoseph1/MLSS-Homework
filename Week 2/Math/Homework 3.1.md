@@ -31,15 +31,22 @@ $$X^T\beta - y + u - v = 0$$
 is no greater than the minimum of $\sum_{i = 1}^N \rho_\tau(y_i - x_i^T\beta)$.  The other direction follows from the fact that the only way to diminish $f(u, v)$ is to decrease the value of either $u_i$ or $v_i$ in some coordinate $i$.  However, any decrease in $u_i$ must result in an identical decrease in $v_i$, but at least one of these is already $0$, so they can't be decreased any further.  
 
 ### 4
-The problem is equivalent to minimizing
+The problem is equivalent to finding
 $$\begin{align*}
-L(\beta, u, v, \lambda, \mu, \nu) = \max_{\lambda, \mu, \nu} \min_{\beta, u, v} &\quad u^T1\tau + v^T1(1 - \tau)\\
+L(\beta, u, v, \lambda, \mu, \nu) = \min_{\beta, u, v} \max_{\lambda, \mu, \nu} &\quad u^T1\tau + v^T1(1 - \tau)\\
 &- \lambda^T(X^T\beta - y + u - v)\\
 &- \mu ^T u - \nu^Tv
 \end{align*}$$
-subject to $\mu, \nu \ge 0$.
-
-Taking a derivative with respect to $\beta$ tells us this occurs when $X\lambda = 0$.  I.e., $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to find a saddle point of
+subject to $\mu, \nu \ge 0$.  By the minimax theorem, this is the same as
+$$
+\begin{align*}
+\max_{\lambda, \mu, \nu} \min_{\beta, u, v} &\quad u^T1\tau + v^T1(1 - \tau)\\
+&- \lambda^T(X^T\beta - y + u - v)\\
+&- \mu ^T u - \nu^Tv
+\end{align*}
+$$
+Notice that $X\lambda$ must equal zero, or the inner minimization will equal $-\infty$ (by making $\beta$ arbitrarily large).  So, $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to find a saddle point of
+Notice that $X\lambda$ must equal zero, or the inner minimization will equal $-\infty$ (by making $\beta$ arbitrarily large).  So, $\lambda$ is in the null-space of $X$.  Plugging this in yields that, equivalently, we want to find a saddle point of
 $$L_2(u, v, \mu, \nu) = u^T1\tau + v^T1(1 - \tau) - \lambda^T(- y + u - v) - \mu ^T u - \nu^Tv.$$
 Taking derivatives with respect to $u$ and $v$ and setting them equal to 0 shows that a saddle point occurs when
 $$\mu = 1\tau - \lambda \quad\text{and}\quad \nu = 1(1 - \tau) + \lambda.$$
