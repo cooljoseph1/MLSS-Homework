@@ -68,3 +68,9 @@ If $z_i \in (0, 1)$, then there are two cases to consider:
 - Otherwise, $y_i - x_i^T\beta = 1 - 2z_i$.
 
 ### 6
+```
+tau = 0.75 | slope = 0.21740773372818534 | intercept = 0.4492025040398797
+tau = 0.5 | slope = 0.23820824709390254 | intercept = -0.3307244016150209
+tau = 0.25 | slope = 0.22136016726775787 | intercept = -0.9926835520240038
+```
+Look at the code for more details.
