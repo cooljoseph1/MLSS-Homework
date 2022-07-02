@@ -27,7 +27,7 @@ Thus, $f(x^*) = f(x')$, and so $x^*$ is an optimum of the primal.
 
 ### 5
 The KKT conditions are
-1. Stationary:  The derivative of the Lagrangian with respect ot $x$ is 0.  Since $f'(x^*) = 0$, this is equivalent to $$\sum_{i} \lambda_i^* g_i'(x^*) + \sum_j \lambda_j^* f_i'(x^*) = 0.$$
+1. Stationary:  The derivative of the Lagrangian with respect ot $x$ is 0.  I.e. $$f'(x) + \sum_{i} \lambda_i^* g_i'(x^*) + \sum_j \lambda_j^* f_i'(x^*) = 0.$$
 2. Primal feasibility.  $g_i(x^*) \leq 0$ for all $i$ and $f_j(x^*) = 0$ for all $j$.
 3. Dual feasibility:  $\lambda_i^* \ge 0$ for all $i$.
 4. Complementary slackness:  $$\sum_{i = 1}^m \lambda_i^* g_i(x^*) = 0.$$
@@ -41,4 +41,6 @@ $$f(x^*) + \sum_{i} \lambda_ig_i(x^*).$$
 Since $g_i(x^*) \leq 0$, this is less than or equal to $f(x^*)$, as desired.
 
 ### 7
-Since $\lambda_i > that $\lambda_i g_i$ is a convex 
+Since $\lambda_i \ge 0$, $\lambda_i g_i$ is a convex function.  The sum of convex functions and affine functions is again a convex function.  Therefore,
+$$\ell(x) \triangleq L(x, \lambda^*)$$
+is a convex function.  The stationary condition implies that that $\ell(x^*)$ is the minimum value of $\ell(x)$ (since the derivative of a convex function is only $0$ at the minimum).  This means that $L(x^*, \lambda^*) \leq L(x, \lambda^*)$ for all $x$.
