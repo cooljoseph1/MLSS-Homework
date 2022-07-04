@@ -17,3 +17,4 @@ Letting $k(u, v) = \langle \phi(u), \phi(v) \rangle$, expanding this gives the k
 $$\frac{1}{m^2}\sum_{i = 1}^m\sum_{j = 1}^m k(x_i, x_j) - 2k(x_i, y_j) + k(y_i, y_j).$$
 
 ### 4
+The calculated empirical MMD is $0.00082$.  My corresponding conclusion is that $x$ and $y$ were drawn from the same distribution--the uniform distribution on $[0, 1]$.
