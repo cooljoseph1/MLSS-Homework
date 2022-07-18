@@ -5,3 +5,6 @@ Batch normalization, weight normalization, and layer normalization are all invar
 The paper then goes into some Riemannian geometry that doesn't serve much of a purpose except showing off how smart the author is.  (Maybe I'm missing something, but the conclusion they come to, "The curvature along the $w_i$ direction will change by a factor of $\tfrac12$ because the $\sigma_i$ will also be twice as large," could probably have been explained solely using first-year differential equations.)
 
 Empirically, layer normalization is competitive with or better than other methods (e.g. batch normalization & no normalization) on a large number of tasks, including handwriting generation, filling in blanks, and skip-thought generation.  Layer normalization is worse at training convolutional networks, however.
+
+## Weakness
+This does very little to stop overfitting.  It also 
