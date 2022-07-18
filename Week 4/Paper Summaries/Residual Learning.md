@@ -1,0 +1,9 @@
+# Deep Residual Learning for Image Recognition
+
+Early neural networks were rife with overfitting.  They modelled their training data well, but failed catastrophically to generalize to unseen new data.  One method, called "early stopping", to avoid overfitting is to split the dataset into "train" and "validation" sets, and train on using the "train" data until the network fails to improve on the "validation" data.  In their paper, "Dropout:  A Simple Way to Prevent Neural Networks from Overfitting," Srivastava, etc. propose an elegant rival to early stopping:  dropout.
+
+Dropout consists of randomly dropping out nodes of the neural network while training.  When a node is dropped, all connections to other nodes in the network are cut.  It's equivalent to setting the activation of that neuron to 0.  At evaluation time, each node is multiplied by 1 - {the probability it was dropped while training}.  This causes the expected value of the node to stay the same.  Dropout's advantages are that it is fast, extremely simple to implement, and very good at stopping overfitting.
+
+Dropout's robustness relies on the fact that it is, in effect, approximating an exponentially large set of models that share the same nodes.  Training on a large collection of models makes dropout much better at generalizing, since it is unlikely that all of them will overfit in the same ways.
+
+The authors of "Dropout" stated that crossing over in sexual reproduction inspired dropout.  Crossing over creates robustness in individual genes because they can't rely on a large network of other genes to compensate for their quirks;  any individual gene must rely on itself or a small number of other genes.  Dropout similarly enforces each node's self-reliance because there are no guarantees that other nodes will be there for it.

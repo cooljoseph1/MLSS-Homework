@@ -1,0 +1,1 @@
+Wow... the analogy I had throughout the reading--the Ideal Gas Law--was actually mentioned in the paper!  This is such an awesome paper!  (They also included what I thought the critical value of L* might imply:  1.7 nat/token is the entropy of natural language.)

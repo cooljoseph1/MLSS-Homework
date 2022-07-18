@@ -4,3 +4,8 @@
 
 .trash/
 .DS_Store
+
+.ipynb_checkpoints/*
+
+"Week 1/Coding/*.npy"
+"Week 1/Coding/*.mat"
