@@ -2,7 +2,6 @@
 ### 1
 By Bayes' theorem,
 $$P(y^* \mid X^*, X, y) = \frac{P(y^*, y \mid X^*, X)}{P(y \mid X^*, X)}.$$
-
 The numerator and denominator on the right are
 $$\frac{\exp(-\frac12
 \begin{bmatrix}
