@@ -8,3 +8,6 @@ An identity function is added to the ReLU.  The identity function creates a shor
 The standard deviation of residual responses indicates that ResNets really do learn residual functions (as opposed to just copying the previous layer through the shortcut), and each residual layer has a smaller impact as more layers are introduced.
 
 ResNets stop improving for extremely large models, but are still trainable.
+
+## Strength
+ResNets are very easy to implement--just add shortcuts between layers of a normal neural network.

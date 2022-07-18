@@ -6,5 +6,5 @@ The paper then goes into some Riemannian geometry that doesn't serve much of a p
 
 Empirically, layer normalization is competitive with or better than other methods (e.g. batch normalization & no normalization) on a large number of tasks, including handwriting generation, filling in blanks, and skip-thought generation.  Layer normalization is worse at training convolutional networks, however.
 
-## Weakness
-This does very little to stop overfitting.  It also 
+## Weaknesses
+This does very little to stop overfitting.  It also fails to solve the vanishing gradient problem (and may in fact make it worse, since small weights can have an even smaller when the layer is normalized).  The only thing layer normalization seems to help with is training time, and even then it doesn't do much better than batch normalization for anything except recurrent neural networks with small batch sizes.
