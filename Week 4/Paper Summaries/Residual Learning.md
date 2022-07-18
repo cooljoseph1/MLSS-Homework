@@ -10,4 +10,9 @@ The standard deviation of residual responses indicates that ResNets really do le
 ResNets stop improving for extremely large models, but are still trainable.
 
 ## Strength
-ResNets are very easy to implement--just add shortcuts between layers of a normal neural network.
+ResNets are fairly easy to implement--just add shortcuts between layers of a normal neural network.
+
+## Weaknesses
+They don't handle transitioning between different dimensions very well.
+
+They require batch normalization, which isn't good for recurrent neural networks.
