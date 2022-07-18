@@ -4,3 +4,7 @@ Neural networks appear to degrade in accuracy (even on the training set) as they
 The basic building block of residual learning is the following:
 ![[Residual Learning 2022-07-18 15.24.19.excalidraw]]
 An identity function is added to the ReLU.  The identity function creates a shortcut path for gradients to update earlier layers.
+
+
+
+Empirically, using an ensemble of var
