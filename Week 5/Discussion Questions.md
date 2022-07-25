@@ -26,8 +26,39 @@ Carlsmith writes:
 
 Do you think this is true? Give a concrete example where something like this could occur. How likely is it?
 
-
 ### Answer
 I think this point is a bit disingenuous.  That their example of "predicting strings of text" requires planning is obvious to anyone who thinks about it for a bit.  It's not really hidden that it's an "agential" task.  The only reason it might be confusing at first is that we typically think of an "agent" as someone with **independent, self-directed** goals, which is not exactly what Carlsmith means by "agent".  In essence, Carlsmith's use of the word "agent" is anthropomorphisizing AIs he really shouldn't be.
 
-Other examples of unconventional "agents" include translators and the prophecy orbs in the Harry Potter universe.
+Other examples of unconventional "agents" include translators and any future forecaster that anticipates it's answers will be used.
+
+### Question
+Carlsmith discusses the idea of instrumental convergence, and it is also covered in the optional readings. Brainstorm some goals an AI might have that aren’t mentioned in any of the readings. Can you imagine ways that power could be helpful for achieving those goals?
+
+### Answer
+Rationality -- It makes the AI more accurate in its predictions and more efficient with its intelligence.
+
+Curiosity (i.e. the desire to try new things) -- This greatly helps the AI learn more (resource acquisition).
+
+### Question
+Carlsmith mentions that there are problems with proxies. Think of a measurable value that might appear good for an AI to optimize. Now think of some ways that optimizing that proxy to the extreme could be problematic. 
+
+### Answer
+Proxy:  What fraction of humans vote that they think its actions are good?
+Problems:  Kill every human except some small sub-population that is okay with the rest of humanity's death (e.g. if they are some indigenous tribe without contact with the outside world) and mostly approves of the actions they see.
+
+Proxy:  What *number* of humans vote that they think its actions are good?
+Problems:  Clone humans that like your actions, killing/disregarding everyone else.
+
+
+### Question
+Analyze the following statements. Focus on relevant considerations rather than just trying to decide if a statement is true or not.
+- If AI does not actively seek power, then it cannot create an existential catastrophe.
+- Deep learning cannot possibly be deceptive or power-seeking, because it’s just a mechanism with some matrix multiplies and nonlinear functions.
+- Power-seeking is just an anthropomorphism. Non-human systems won’t seek power like humans do.
+- We could solve this problem by just building altruistic systems that live in harmony with humans.
+
+### Answer
+- False.  Consider diseases--they don't actively seek power, but superbugs are x-risks.  AIs can similarly unintentionally cause existential catastrophe, but it's much less likely than purposely doing so.
+-  Wait, what?  That's ridiculous.
+- Sure, they won't seek power exactly like the kind of power humans seek, but that doesn't mean they won't seek power.
+- Hahahahaha.  Like we did with animals, right?
