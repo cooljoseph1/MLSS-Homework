@@ -13,6 +13,6 @@ ResNets stop improving for extremely large models, but are still trainable.
 ResNets are fairly easy to implement--just add shortcuts between layers of a normal neural network.
 
 ## Weaknesses
-They don't handle transitioning between different dimensions very well.
+ResNets don't handle transitioning between different dimensions very well.
 
-They require batch normalization, which isn't good for recurrent neural networks.
+ResNets require batch normalization (or at least the ones in the paper did), which isn't good for recurrent neural networks.
