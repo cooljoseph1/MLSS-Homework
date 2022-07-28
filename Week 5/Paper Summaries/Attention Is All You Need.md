@@ -8,4 +8,14 @@ The transformer is their basic building block.  It consists of an attention bloc
 It's important to mask future outputs in the decoder so the model actually has to learn to predict the future.  In this paper, that's done by setting to $-\infty$ all those values right before the softmax, effectively zeroing their contribution.
 
 ## Feed-forward Networks
-The feed-forward networks are fully connected *per position*.  They do not transfer information between different positions (i.e. words).  This is important in the decoder so that early words can't glimpse the future.
+The feed-forward networks are fully connected *per position*.  It's like a 1x1 convolution.  They do not transfer information between different positions (i.e. words).  This is important in the decoder so that early words can't glimpse the future.
+
+## Results
+Their results are the next best (though only slightly better at En-Fr) at translating both English to German and English to French.  Their training costs are significantly less on the English-French translation, and about half of the next best model for English-German.
+
+## Judging:
+Weakness 1:  It's so inefficient!  In a single attention block, only a small fraction of the values actually matter.  Instead of using a softmax, why can't they just us a max (or k-max)?  This would definitely make backpropagation faster, and probably would also speed up the forward step.
+
+Weakness 2:  Multi-headed attention seems like an unnecessary complication.  See "Single Headed Attention RNN: Stop Thinking With Your Head", for a rather (informal) example of where single headed attention is comparable to multi-headed attention.
+
+Strength:  Attention is useful in tons of applications other than just language processing.  I know, for example, that they've been used in image recognition & captioning.
