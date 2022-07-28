@@ -20,4 +20,11 @@ Communicate uncertainty.  Communicate honsetly.
 ## Alignment
 Okay, I'm done writing so much in a "summary".  From now on, only the biggest headings get text.
 
-This section consists of lots of opaque/circular/vague methods to solve problems that may or may not (probably may) come up in the future.  E.g., the authors write, "To get a sense of an agent’s values and see how it make tradeoffs between values, researchers could also create diverse environments that capture realistic morally salient scenarios and characterize the choices that agents make when faced with ethical quandaries."  Why couldn't the authors just write, "Researchers could give the agents et
+This section consists of lots of opaque/circular/vague methods to solve problems that may come up in the future regarding alignment.  E.g., the authors write, "To get a sense of an agent’s values and see how it make tradeoffs between values, researchers could also create diverse environments that capture realistic morally salient scenarios and characterize the choices that agents make when faced with ethical quandaries."  Why couldn't the authors just write, "Researchers could give the agents ethical dillemas to test their morals?"
+
+## Systemic Safety
+Machine learning can eventually be used to hack, and this is dangerous and needs to be countered with machine learning.  We also need to make sure our ML models aren't hacked, because (1) they could be dangerous in the hands of the public and (2) they could be subverted to give incorrect answers.
+
+## Weaknesses
+- This paper doesn't really address any *actual* solutions to any of the problems it presents.  I guess that's why it's titled "**Unsolved** Problems in ML Safety".
+- There's much less of an emphasis on securing models that could be dangerous in the hands of the public than there should be.  E.g., The weights for a model that can create RNA sequences from desired protein folds should probably not be published on Github for any bad actor to download and design superviruses.  "Unsolved Problems in ML Safety" makes no mention on restricting such information.
