@@ -54,3 +54,6 @@ Often good to pretrain on one of above and then finetune on specific tasks.
 ### Open questions
 How do we do long documents?
 Can we be more efficient in fine tuning?
+
+Other Notes:
+TO BE DONE LATER
