@@ -55,5 +55,35 @@ Often good to pretrain on one of above and then finetune on specific tasks.
 How do we do long documents?
 Can we be more efficient in fine tuning?
 
+
+## Leveson Lecture
+What is STAMP?
+### Models of loss
+chain of event -- linear, one thing leads to the next directly.
+
+Defense in depth -- several backup systems.  E.g. in the Bhopal chemical, they had storage in nitrogen gas (inert), regular inspection, double walled barrels, etc.
+
+### Exercise:
+Causal factors:  Too many false positives on safety issuesv  led the operators to think real problems were just more false positives.
+Root cause:  "Safety" features were restrictive in ways that didn't actually help. 
+ They were designed to appear good, but weren't actually useful to the operators.
+Questions:  How can we ensure that "safety" features are actually doing more good than harm/stress?  In driving, for example, is forcing people to do head checks every time they change lanes or turn really safer, or is this arbitrary 100% rule just a way to make lawmakers look like they're doing something to make driving safer?
+
+### Back to Chain of event model
+Root cause is arbitrary.  Making one up provides "illusion of control".  Problem with this is that it often leads to treating symptoms, not the actual problem.  Chain of event is not enough for a causal model.
+
+### Level 2 conditions
+What causes the events?
+Most of the safety features were poorly designed in the Bhopal accident, which is one cause of why they failed.
+
+### Level 3 systemic problems?
+Similarly to how a lot of companies higher cybersecurity "experts" to look like they're handling data securely, Bhopal made "safety" features to look like they were handling MIC safely.  In reality, however, the safety features did little to guarantee that the system was actually safe.
+
+### Pilots:
+Almost always blamed, even though there's lots of confounding factors.  Often blamed, even when confounding factors clearly are a big reason, because other pilots *don't* get in crashes from those same problems.
+
+### Complexity
+Sometimes, things go wrong not because of mechanical failures, but because people don't understand them.
+
 Other Notes:
 TO BE DONE LATER
