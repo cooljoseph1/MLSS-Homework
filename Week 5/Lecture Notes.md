@@ -85,5 +85,26 @@ Almost always blamed, even though there's lots of confounding factors.  Often bl
 ### Complexity
 Sometimes, things go wrong not because of mechanical failures, but because people don't understand them.
 
+E.g. Mars Polar Lander -- crashed because of software requirements not matching what the software developers were told.  Noise -- unexpected by software developers -- caused it to cut off its engines.
+
+Warsaw A320 -- software incorrectly thought the plane hadn't landed.
+
+Complexity is a COMPONENT INTERACTION ACCIDENT.
+
+### Software
+Infinite complexity possible.  Context determines safety.  (Software never fails.  Only how it is implemented, or what situations it is put into causes something else to fail.)  They have design errors, not mechanical failures.
+
+### STAMP
+We need to integrate things.  Then she spends 30 minutes talking about how its a "paradigm change" and "super needed", but doesn't actually says what it is.
+
+She gets sidetracked about this "analytic decomposition".  Okay, that seems pretty obvious...  Aparently, though, that's still "not the problem". 
+
+### System Theory
+Focuses on systmes "taken as a whole".  "Emergent properties".  Okay, so how is this actually **USED**?  Lol, emergent properties.  Like, what does that even mean?  It's just another thought stopper.  I don't think she intends to actually impart useful information beyond a few case studies of system failures.
+
+Aha, we need to somehow "control" the emergent properties.  Explain how your control doesn't become a part of the system, in which new emergent properties will arise.
+
+So, the big paradigm shift is viewing safety as a "control" instead of "reliability" problem?  What does that even mean?  If you could control failures, obviously you would just stop making them.  If you could control your 
+
 Other Notes:
 TO BE DONE LATER
