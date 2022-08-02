@@ -55,6 +55,17 @@ Often good to pretrain on one of above and then finetune on specific tasks.
 How do we do long documents?
 Can we be more efficient in fine tuning?
 
+## Reinforcement Learning
+Basic idea:  Train an agent to maximize a cumulative reward.
+Difficulties:  Sampling reward is typically costly, so we need to be sample efficiency.  Often, the reward function is implicit (e.g. in chess) and you need to figure it out from the rules.
+
+Sometimes, reward depends on where you are in space--you need to explore to make accurate predictions.
+
+Q-learning:  Use a neural network to approximate the reward function.  Then, take whatever action maximizes your score according to the Q-function.
+
+
+
+
 
 ## Leveson Lecture
 What is STAMP?
@@ -119,8 +130,3 @@ Example:  Columbia shuttle loss -- one circular cause is performance pressure le
 
 ### ROI on using STAMP:
 **ONE** industry contractor **claims** they are seeing 15-20% return on investment when using StPA.
-
-
-
-Other Notes:
-TO BE DONE LATER
