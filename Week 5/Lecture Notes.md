@@ -104,7 +104,23 @@ Focuses on systmes "taken as a whole".  "Emergent properties".  Okay, so how is 
 
 Aha, we need to somehow "control" the emergent properties.  Explain how your control doesn't become a part of the system, in which new emergent properties will arise.
 
-So, the big paradigm shift is viewing safety as a "control" instead of "reliability" problem?  What does that even mean?  If you could control failures, obviously you would just stop making them.  If you could control your 
+So, the big paradigm shift is viewing safety as a "control" instead of "reliability" problem?  What does that even mean?  If you could control failures, obviously you would just stop making them.  Redundancy sounds more like "reliability" than control.  Fail-safe design is laudable, but isn't the whole point about your spiel on "controlling" failures figuring out how to recover from unexpected failures??
+
+Aha!  Their new way of modeling is making everything an input-output diagram.  Inputs = arguments passed to software/things observed by human.  Outputs = decisions.  For some reason, her model has two separate blocks for "process model" and "decision making".  Maybe to point out two places where failures can occur?
+
+### STAMP again??
+**System-Theoretic Accident Model and Processes**
+Still don't say what it actualy IS or HOW TO USE IT.  Just that it somehow incorporates more factors into the "blame".
+
+### Circular causes:
+Root causes are not individual nodes.  They are forces emerging from bad feedback loops.
+
+Example:  Columbia shuttle loss -- one circular cause is performance pressure leads to higher expectations, leads to higher performance pressure.
+
+### ROI on using STAMP:
+**ONE** industry contractor **claims** they are seeing 15-20% return on investment when using StPA.
+
+
 
 Other Notes:
 TO BE DONE LATER
