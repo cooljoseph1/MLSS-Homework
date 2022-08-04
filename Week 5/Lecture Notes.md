@@ -1,6 +1,6 @@
 ## RNN
 Pretty basic concept.  Inputs fed back into network.  Layer normalization helps avoid extremes & can get longer recurrences.  (Suffers from processing large amounts of text, since gradients don't flow well.)  Basic functionality:
-![[Lecture Notes 2022-07-27 23.54.43.excalidraw]]
+![[Lecture Notes 2022-07-27 23.54.43.excalidraw.svg]]
 
 
 LSTM (long short term memory) can fix gradient flows since there's a direct path for the gradient (kind of like residual connections).
@@ -62,9 +62,9 @@ Difficulties:  Sampling reward is typically costly, so we need to be sample effi
 Sometimes, reward depends on where you are in space--you need to explore to make accurate predictions.
 
 Q-learning:  Use a neural network to approximate the reward function.  Then, take whatever action maximizes your score according to the Q-function.
+Policy Gradients:  Train neural network to get probabilities you should take each action.  Use REINFORCE to compute gradients.
 
-
-
+Imitation learning:  Get data from human experts, try to imitate them.  (Supervised.)
 
 
 ## Leveson Lecture
