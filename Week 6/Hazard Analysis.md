@@ -47,4 +47,19 @@ a) positive feedback
 b) self-organization
 c) micro-macro dynamics
 d) butterfly effect
-e) 
+e) positive feedback loop
+f) positive feedback loop
+g) positive feedback loop
+
+### 10
+"selection pressure"
+"political pressure"
+"economic pressure"
+
+### 11
+Pencils are unreliable but safe.  Their tips often break off, but the negative consequences of them doing so is very small.
+
+Airplanes are reliable but not safe.  Very few airplanes crash, but when they do many people die.
+
+### 12
+The key difference in intent matters very much in preventing losses.  Protecting against a malevolent actor is much harder than a benevolent actor that makes mistakes.  E.g., if you want a neural network to correctly classify images the most often, protecting against random error is much easier than protecting against a bad actor.  In the former case, just give more training data/scale up your model.  In the latter case, we don't even have the tools yet to be robust against adversarial attacks.
