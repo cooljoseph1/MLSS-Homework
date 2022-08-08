@@ -49,4 +49,14 @@ Weakest criticism = We should only support work that has direct impact (linear c
 Strongest motivation = The most dangerous source of risk is unexpected changes in behavior when some conditions occur.
 Weakest motivation = there was only one motivation.
 
-Strongest criticism = 
+Strongest criticism = Trojans might not result in treachery.  They priobably will just cause the model to error out.
+Weakest criticism = hidden behavior might be easy to predict.  (I'd think that such behavior would be subconscious, or else it would have already been edited out.)
+
+### Transparency
+Strongest motivation = Can help unearth deception
+Weakest motivation = Keeps humans sovereign
+
+Strongest criticism = Even if we labeled each of a model’s neurons, it wouldn’t necessarily be interpretable. To holistically understand models, we are better off understanding them functionally.
+Weakest criticism = Humans are not interpretable.  We actually are somewhat interpretable.
+
+Lots of good criticisms of this one.
