@@ -1,3 +1,8 @@
 # ViM: Out-Of-Distribution with Virtual-logit Matching
 Out-of-distribution (OOD) detection is important for a variety of reasons (e.g. detecting when the model is being deployed in situations it shouldn't be).  This paper describes a method to do OOD detection by creating a virtual logit that represents how out of distribution the input is.
 
+They review other methods and point out how they are lacking (e.g. methods using logits/probabilities, features that depend on the nullspace of the weight matrix are not considered).
+
+They next build up to what their Virtual-logit Matching is by reviewing some of the math regarding OOD scores based on the null space and principal space (where "principal space" is defined as a small subspace spanned by the largest eigenvectors of $X^TX$).
+
+Here's how the Virtual-logit Matching works.  First, construct the "principal subspace $P$" by taking the space spanned by the largest $D$ eigenvectors of $X^TX$, (where $X$ are the values taken right before the logits, and $D$ is some constant).  Then, create a virtual logit for the OOD by taking the norm of the component of $x$ orthogonal to $P$, and scaling this norm so that 
