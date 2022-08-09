@@ -14,3 +14,6 @@ What are some post-hoc methods?
 - Explain by example -- Give an example of what the model thinks is the closest image to the given one, along with a class prediction.
 
 Linear models are not always more interpretable than deep neural networks.  Although the algorithm is simpler, they don't have the same kind of clear features that the nodes of neural networks have.  Also, transparency might not be what we need; humanity could be better off with less transparent models that are much more accurate or robust.  Finally, be wary of post-hoc interpretations.  They often look really cool, but aren't actually as meaningful as they look.
+
+### Judge
+The authors seem to be trying to consolidate the various interpretations of "interpretability", but don't ever give a single definition of interpretability that others could use.  Instead, they just list a bunch of ways interpretability has been used in the past.  I think this paper would have been more useful to outside researchers if they gave more specific guidelines on how the word "interpretability" should be used.

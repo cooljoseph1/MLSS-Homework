@@ -5,3 +5,4 @@ date: August 8, 2022
 geometry: margin=1in
 ---
 ![[Model Interpretability]]
+![[Virtual-logit Matching]]
