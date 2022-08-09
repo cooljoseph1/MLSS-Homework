@@ -1,3 +1,9 @@
+---
+title:  Monitoring
+author: Joseph Camacho
+date: August 8, 2022
+geometry: margin=1in
+---
 ### 1
 a) The calibration error is always $\varepsilon$, so the RMS calibration error is also $\varepsilon$.
 b) The calibration error is always $50\%$, so the RMS calibration error is $50\%$.
@@ -70,4 +76,4 @@ Neural networks are huge, and it's hard to tell whether any one part of it is Tr
 Trojans don't look anomalous or adversarial to the network itself.  The network was trained to accept them.
 
 ### 15
-a)  This is what most Trojan detectors are trained to detect.
+a)  This is what most Trojan detectors are trained to detect, so common detectors are most likely to detect this attack (meaning it's unlikely that the Trojan was inserted this way).
