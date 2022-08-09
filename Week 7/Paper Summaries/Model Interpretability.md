@@ -13,4 +13,4 @@ What are some post-hoc methods?
 - Local explanations -- E.g., saliency maps
 - Explain by example -- Give an example of what the model thinks is the closest image to the given one, along with a class prediction.
 
-Linear models are not always more interpretable than deep neural networks.  Although the algorithm is simpler, they don't have the same kind of clear features that the nodes of neural networks have.  Also, interpretability needs to be clarified more 
+Linear models are not always more interpretable than deep neural networks.  Although the algorithm is simpler, they don't have the same kind of clear features that the nodes of neural networks have.  Also, transparency might not be what we need; humanity could be better off with less transparent models that are much more accurate or robust.  Finally, be wary of post-hoc interpretations.  They often look really cool, but aren't actually as meaningful as they look.
