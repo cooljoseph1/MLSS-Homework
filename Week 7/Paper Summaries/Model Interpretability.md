@@ -6,3 +6,11 @@ There are many goals of interpretability.  One of the biggest is being able to t
 What does an interpretable model look like?
 - Simulatable -- A human could reasonably run through the calculations needed.  Basically only sparse linear models and short decision trees are interpretable under this criterion.
 - Decomposable -- The model can be broken down into intuitive/understandable parts.
+- Algorithmic transparency -- The model's algorithm can be proven to have certain properties such as convergence or nice decision boundaries.
+What are some post-hoc methods?
+- Text explanation -- The model gives a written explanation of why it made its choices.
+- Visualization -- Use something like t-SNE to visualize high dimensional embeddings.  You can also look at what inputs cause certain nodes in a neural network to be highly activated.
+- Local explanations -- E.g., saliency maps
+- Explain by example -- Give an example of what the model thinks is the closest image to the given one, along with a class prediction.
+
+Linear models are not always more interpretable than deep neural networks.  Although the algorithm is simpler, they don't have the same kind of clear features that the nodes of neural networks have.  Also, interpretability needs to be clarified more 
