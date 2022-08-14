@@ -16,3 +16,6 @@ What's worse than the AI saying "yes" and then trying to kill us is it saying "n
 Just because humans will cooperate easily with each other (which is a rather dubious notion) tells us nothing about whether AIs will cooperate easily with humans.  AIs will still want many of the same things we do (control over other people, popularity), and these desires may come into conflict.
 
 ### 4
+There is no chain of evidence or reason connecting the if ("we can get multiple agent systems beneficial and safe") with the then clause ("single AI agents will be safe too").  I can't argue against a claim that doesn't exist, except to say that it is lacking substance.
+
+### 5
