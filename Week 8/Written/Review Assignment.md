@@ -25,3 +25,6 @@ There are a few problems with this statement.
 
 ### 6
 Labelling an image with text is also super complicated, but we managed to do that decently well.  We can do seemingly impossible tasks.
+
+### 7
+"Fully und
