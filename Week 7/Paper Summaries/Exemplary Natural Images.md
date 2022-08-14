@@ -1,4 +1,7 @@
 # Exemplary Natural Images Explain CNN Activations Better than State-of-the-Art Feature Visualization
+Subjects were given groups of images that highly activate and minimally activate certain neurons in a neural network.  They were asked to choose which one of two more presented images would be most likely to highly activate the neuron, and their confidence for it.  Response time was also tracked.  Overall, natural images vastly outperformed (>2 standard deviations) images generated via feature visualization in accuracy, and also outperformed in confidence and reaction time.  In fact, natural images outperformed even hand-picked feature visualizations from feature visualization experts.
+
+More sample images led to higher accuracy in both synthetic and natural images.
 
 ### Judgement
-The whole "confidence level" part of their study doesn't map well onto real probabilities.  I think this study would have been better with either (1) having participants simply select between two images or (2) having a "slider" of confidence.
+The whole "confidence level" part of their study is too subjective, and doesn't really add much because (1) considering that both test groups had, on average, more than 75% accuracy, a well calibrated human should be hitting "3" (most confident) almost every time, (2) most subjects are poorly calibrated, so this doesn't actually give much meaningful data, and (3) what does this actually tell us that the accuracies don't?  That humans feel more confident, regardless of whether they actually are more accurate?  That seems like a rather *dangerous* thing to have in an interpretability tool, not something to be praised.

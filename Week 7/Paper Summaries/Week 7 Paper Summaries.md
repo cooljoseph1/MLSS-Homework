@@ -6,3 +6,4 @@ geometry: margin=1in
 ---
 ![[Model Interpretability]]
 ![[Virtual-logit Matching]]
+![[Exemplary Natural Images]]
