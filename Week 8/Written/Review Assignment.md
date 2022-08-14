@@ -27,4 +27,59 @@ There are a few problems with this statement.
 Labelling an image with text is also super complicated, but we managed to do that decently well.  We can do seemingly impossible tasks.
 
 ### 7
-"Fully und
+You don't need to understand something very well to be confident it will work.  Consider, for example, the number of people who turn on their TVs every day without understanding what goes into building a silicon transistor, or creating colors by mixing red, green, and blue light, or how sound is heard by tiny hairs vibrating in our ears.  Transparency can certainly help us guarantee that something will work, but it is not certainly needed.
+
+### 8
+The model could change in the future (by seeing more training data, for example), or be placed in scenarios your testing didn't cover.
+
+### 9
+Not all humans want to dominate others.  Your premise is fundamentally flawed.
+
+### 10
+If humans and corporations gain power by letting an AI seek power, then they might very well do so.  Power is only zero-sum when considered over all intelligent agents.  But in the {individual AI}-{individual company} payoff matrix, it is not a zero-sum game.
+
+### 11
+One of the biggest selling points of anomaly detection is detecting dangerous superintelligences.  Telling us to not work on anomaly detection because a superintelligence is also good at anomaly detection seems to be begging the question.
+
+### 12
+Investing in a diverse portfolio is simply good sense.  The same applies to where to invest your time in AI safey.
+
+### 13
+Most of these scenarios are at worst no worse than the situation in which no AI safety was developed.  For the other scenarios, I think the benefits (being able to stop AIs from hurting us) outweigh the risks (inadvertently helping malicious actors).
+
+### 14
+Utilitarinism espouses increasing the value of some function (called a utility function).  Hedonistic Utilitarianism, for example, argues for increasing the net pleasure of humanity (or, perhaps all sapient agents).
+
+Deontological theories emphasize following rules.  E.g., killing is bad and giving to charity is good.
+
+### 15
+No, this doesn't aim a deadly blow at ethics.  It just tells us that human ethics is very specific to humanity.  These behaviors promote ensuring the hive is strong at the cost of the individual.
+
+### 16
+Aiding in euthanesia -- Deontologists argue that killing another is bad, while utilitarianisms may argue that killing a person who is suffering with little chance of recovery is good, because it reduces displeasure.
+
+### 17
+War -- The overall result is dead people, destroyed enquipment, and a destroyed landscape, which is definitely a net negative.
+
+### 18
+The Nash equilibrium is War, War.
+The Nash equilbrium is Peace, Peace.  (Is Leviathan from Worm, by chance?)
+
+There become two Nash equilbriums:  War, War; and Peace, Peace.
+The Nash equilbrium becomes Peace, Peace.
+
+### 19
+He should swerve.
+
+### 20
+No.  There are two Nash equilbrium:  One person keeps going and the other person swerves.
+
+### 21
+Top right and bottom left.
+
+### 22
+
+Player 2
+| black 5 | red 3 | red 2 |
+|-|---------
+| a | b | c |
