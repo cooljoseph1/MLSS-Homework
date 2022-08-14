@@ -19,3 +19,9 @@ Just because humans will cooperate easily with each other (which is a rather dub
 There is no chain of evidence or reason connecting the if ("we can get multiple agent systems beneficial and safe") with the then clause ("single AI agents will be safe too").  I can't argue against a claim that doesn't exist, except to say that it is lacking substance.
 
 ### 5
+There are a few problems with this statement.
+1. Even babies have a rudimentary moral compass, so it appears that morality has been somewhat hardcoded into human brains.  AIs won't have this same hardcoding, so learning morality could be much harder for them.
+2. Even if an AI knew what human morality is, there is no guarantee that it will follow it.  Humans don't follow others (or even their own!) codes of morality all the time.
+
+### 6
+Labelling an image with text is also super complicated, but we managed to do that decently well.  We can do seemingly impossible tasks.
