@@ -78,8 +78,25 @@ No.  There are two Nash equilbrium:  One person keeps going and the other person
 Top right and bottom left.
 
 ### 22
+Player 1 on left, player 2 on right
+| | black 5 | red 3 | red 2 |
+| - |-|-|-|
+| red 5 |(0, 0) | (2, 0) | (3, 0) |
+| black 5 | (0, 0)  | (0, 2) | (0, 3) |
 
-Player 2
-| black 5 | red 3 | red 2 |
-|-|---------
-| a | b | c |
+### 23
+A collective action problem.
+
+### 24
+a) general capabilities
+b) monitoring
+c) general capabilities
+d) alignment
+e) monitoring
+f) general capabilities
+g) monitoring
+h) robustness
+i) systemic safety
+j) general capabilities
+k) robustness
+i) general capabilities
